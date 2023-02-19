@@ -1,0 +1,34 @@
+.product h1{
+    font-weight: bold !important;
+    font-size: 35px;
+    margin-bottom: 40px;
+    margin-left: 35px;
+}
+
+.product .product__filter ul{
+    display: flex;
+}
+.product .product__filter ul li{
+    margin-left: 35px;
+    color: gray;
+}
+.active{
+    text-decoration: underline;
+    color: rgb(13, 13, 13) !important;
+}
+.product .product__filter{
+    display: flex;
+    justify-content: space-between;
+}
+.product .btns button{
+  padding: 10px;
+  border-radius: 3px;
+  margin-left: 10px;
+  background-color: transparent;
+  border: 1px solid #e6e6e6;
+  color: gray;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
