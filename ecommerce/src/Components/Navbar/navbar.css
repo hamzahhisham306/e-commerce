@@ -1,0 +1,30 @@
+.navbar-main{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.navbar{
+    height: 40px;
+}
+.navbar_left{
+    display: flex;
+    align-items: center;
+}
+.list ul{
+    display:flex;
+    margin-left: 20px;
+}
+.list ul li{
+    margin-left: 25px;
+}
+li{
+    list-style-type: none;
+}
+.navbar_right .icons_stores{
+  display: flex;
+  align-items: center;
+}
+.navbar_right .icons_stores li{
+    margin-left: 20px;
+    font-size: 20px;
+}
