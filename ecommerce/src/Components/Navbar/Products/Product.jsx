@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './product.css';
 
 function Product() {
+  const [show, setShow]=useState(false);
+  const handleShow=()=>{
+    if(show===false){
+      setShow(true);
+    }
+    else{
+      setShow(false);
+    }
+  }
   return (
     <div className='product section__padding'>
      <h1>PRODUCT OVERVIEW</h1>
@@ -16,13 +25,13 @@ function Product() {
         <li>Watches</li>
      </ul>
      <div className='btns'>
-       <button>Filter</button>
+       <button onClick={()=>handleShow()}>Filter</button>
        <button>Search</button>
      </div>
      </div>
-     <div className='filter__section'>
+    {show&&<div className='filter__section animate__animated animate__fadeInDown'>
         <ul>
-            <h3>Sort By</h3>
+            <h4>Sort By</h4>
             <li>Default</li>
             <li>Popularity</li>
             <li>Average rating</li>
@@ -31,7 +40,7 @@ function Product() {
             <li>Price High to Low</li>
         </ul>
         <ul>
-            <h3>Price</h3>
+            <h4>Price</h4>
             <li>All</li>
             <li>$0.00 - $50.00</li>
             <li>$50.00 - $100.00</li>
@@ -40,21 +49,21 @@ function Product() {
             <li>$200.00+</li>
         </ul>
         <ul>
-            <h3>Color</h3>
-            <li><span></span>Black</li>
-            <li> <span></span>blue</li>
-            <li><span></span>Grey</li>
-            <li><span></span>Green</li>
-            <li><span></span>Red</li>
-            <li><span></span>White</li>
+            <h4>Color</h4>
+            <li><span className='black'></span>Black</li>
+            <li> <span className='blue'></span>blue</li>
+            <li><span className='gray'></span>Grey</li>
+            <li><span className='green'></span>Green</li>
+            <li><span className='red'></span>Red</li>
+            <li><span className='white'></span>White</li>
         </ul>
         <ul>
-            <h3>Tags</h3>
+            <h4>Tags</h4>
             <button>Fashion</button>
             <button>Lifestyle</button>
             <button>Denim</button>
         </ul>
-     </div>
+     </div>}
      </div>
     </div>
   )

@@ -20,6 +20,14 @@
     display: flex;
     justify-content: space-between;
 }
+.filter__section{
+    display: grid;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: rgb(231, 230, 230);
+    grid-template-columns: repeat(auto-fill, minmax(300px ,1fr));
+}
+
 .product .btns button{
   padding: 10px;
   border-radius: 3px;
@@ -31,4 +39,102 @@
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+}
+.black{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: black;
+    left: -16px;
+    top: 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.filter__section li{
+    position: relative;
+    color: gray;
+    margin-top: 7px;
+    cursor: pointer;
+}
+.blue{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: rgb(21, 19, 173);
+    left: -16px;
+    top: 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.gray{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: gray;
+    left: -16px;
+    top: 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.green{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: rgb(8, 116, 56);
+    left: -16px;
+    top: 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.red{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: rgb(173, 19, 40);
+    left: -16px;
+    top: 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.white{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: rgb(255, 250, 251);
+    left: -16px;
+    top: 3px;
+    border: 1px solid black ;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.filter__section button{
+    margin-top: 20px;
+    color: gray;
+    margin-left: 10px;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 13px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }

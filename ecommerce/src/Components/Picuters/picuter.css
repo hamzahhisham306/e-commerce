@@ -1,0 +1,22 @@
+.picuters img{
+    width: 300px;
+    transition: transform 0.2s;
+}
+.picuters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.picuters .card{
+    margin-top: 20px;
+}
+.picuters h5{
+    margin-top: 5px;
+    color: gray;
+    margin-bottom: 9px;
+}
+.picuters p{
+    color: gray;
+}
+.picuters img:hover{
+    transform: scale(1.1);
+}
