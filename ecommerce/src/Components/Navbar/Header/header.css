@@ -39,3 +39,17 @@
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
 }
+@media (max-width:1200px){
+    .carousel .text{
+      left: 33%;
+    }
+    .carousel .text h1{
+        font-size: 19px;
+    }
+    .carousel .text h2{
+        font-size: 20px;
+    }
+    .carousel .text button{
+        font-size: 12px;
+    }
+}

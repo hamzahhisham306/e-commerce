@@ -4,10 +4,14 @@ justify-content: space-between;
 align-items: center;
 }
 .navbar{
-    height: 40px;
+    height: 35px;
+    width: 100%;
+    z-index: 2000;
+    background-color:rgb(255, 255, 255) ;
 }
 .navbar_left{
     display: flex;
+    position: relative;
     align-items: center;
 }
 .list ul{
@@ -27,4 +31,92 @@ li{
 .navbar_right .icons_stores li{
     margin-left: 20px;
     font-size: 20px;
+}
+.menu-icon{
+    margin: 20px auto;
+    width: 20px;
+    margin-left: 30px !important;
+    height: 14px;
+    cursor: pointer;
+    position: relative;
+}
+.menu-icon span{
+    background-color: black;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.menu-icon{
+    opacity: 0;
+}
+.menu-icon span:first-child{
+top: 0;
+}
+.menu-icon span:nth-child(2){
+top: 6px;
+}
+.menu-icon span:last-child{
+top: 12px;
+}
+
+
+.menu-icon.active span:nth-child(2){
+    opacity: 0;
+}
+
+.menu-icon.active span:first-child,
+.menu-icon.active span:last-child{
+    top: 6px;
+    background-color: red;
+}
+
+.menu-icon.active span:first-child{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+.menu-icon.active span:last-child{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+@media (max-width:800px){
+    .menu-icon{
+      opacity: 1;
+    }
+    .navbar .list{
+        display: none;
+    }
+    .navbar.active{
+        height: 280px;
+    }
+}
+li{
+    text-decoration: none;
+}
+.navbar.active .list.active{
+    display: flex;
+    position: absolute;
+    top: 82%;
+    width: 100%;
+}
+.navbar.active .list.active ul{
+    flex-direction: column;
+    padding: 0 !important;
+    width: 100%;
+    margin-top: 30px;
+    background-color: #717fe0;
+}
+.navbar.active .list.active ul li{
+    margin-top: 10px;
 }
