@@ -1,0 +1,38 @@
+.footer{
+    background-color: #222;
+}
+.footer h4{
+    color: #fff;
+}
+.footer__main{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.footer li{
+    color: #b2b2b2;
+    margin-top: 20px;
+}
+.footer p{
+    color: #b2b2b2;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+.footer .col_four button{
+ margin-top: 20px;
+ padding: 15px;
+ border: none;
+ color: #fff;
+
+ border-radius: 20px;
+ background-color: #717fe0;
+ -webkit-border-radius: 20px;
+ -moz-border-radius: 20px;
+ -ms-border-radius: 20px;
+ -o-border-radius: 20px;
+}
+.footer .copy{
+    margin-top: 50px;
+    text-align: center;
+}

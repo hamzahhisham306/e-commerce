@@ -3,14 +3,8 @@ import './product.css';
 
 function Product() {
   const [show, setShow]=useState(false);
-  const handleShow=()=>{
-    if(show===false){
-      setShow(true);
-    }
-    else{
-      setShow(false);
-    }
-  }
+  const handleShow=_=>!show?setShow(true):setShow(false);
+  
   return (
     <div className='product section__padding'>
      <h1>PRODUCT OVERVIEW</h1>

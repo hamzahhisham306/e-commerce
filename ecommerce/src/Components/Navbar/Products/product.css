@@ -18,6 +18,7 @@
 }
 .product .product__filter{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .filter__section{
@@ -29,6 +30,8 @@
 }
 
 .product .btns button{
+    margin-top: 30px;
+    margin-left: 30px;
   padding: 10px;
   border-radius: 3px;
   margin-left: 10px;
@@ -137,4 +140,16 @@
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+}
+@media (max-width:570px){
+    .product .product__filter ul li{
+        font-size: 13px;
+    }
+}
+
+@media (max-width:1150px){
+   .filter__section ul{
+    margin-top: 40px;
+    margin-left: 20px;
+   }
 }
