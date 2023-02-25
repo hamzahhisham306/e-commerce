@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Galary from './Components/Navbar/Galary/Galary';
 import Product from './Components/Navbar/Products/Product';
 import Picuter from './Components/Picuters/Picuter';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <Galary/>
      <Product/>
      <Picuter/>
+     <Footer/>
     </div>
   );
 }
