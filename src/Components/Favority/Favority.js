@@ -11,7 +11,7 @@ function Favority() {
     const [all, setAll]=useState([]);
     const getFavority=async()=>{
         if(cookies.load('userId')){
-       await axios.get(`http://localhost:4000/userfavority/${Number(cookies.load('userId'))}`).then((res)=>{
+       await axios.get(`https://backend-1m3m.onrender.com/userfavority/${Number(cookies.load('userId'))}`).then((res)=>{
         setAll(res.data);
        }).catch((err)=>console.log(err))
     }

@@ -21,7 +21,7 @@ function Register() {
         email: e.target.email.value,
         password: e.target.password.value
       };
-      await axios.post('http://localhost:4000/user', user).then((res) => {
+      await axios.post('https://backend-1m3m.onrender.com/user', user).then((res) => {
         dispatch(setLogin());
         cookies.save("token", res.data.token);
         cookies.save("userId", res.data.id);

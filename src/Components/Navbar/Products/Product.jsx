@@ -12,7 +12,7 @@ function Product() {
   const [all ,setAll]=useState([]);
   const getProducts=async()=>{
     try {
-        await axios.get('http://localhost:4000/all').then(res=>{
+        await axios.get('https://backend-1m3m.onrender.com/all').then(res=>{
             setProducts(res.data);
             setAll(res.data);
 

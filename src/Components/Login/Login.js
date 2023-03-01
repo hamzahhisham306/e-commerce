@@ -26,7 +26,7 @@ function Login() {
       };
       const encode = base24.encode(`${user.username}:${user.password}`);
 
-      const res = await axios.post("http://localhost:4000/login", {}, {
+      const res = await axios.post("https://backend-1m3m.onrender.com/login", {}, {
         headers: {
           authorization: `Basic ${encode}`,
         }

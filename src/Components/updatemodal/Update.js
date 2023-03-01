@@ -16,7 +16,7 @@ function Modal(props) {
         paragraph:event.target.paragraph.value,
         imageUrl:event.target.imageUrl.value
     }
-    await axios.put(`http://localhost:4000/item/${props.id}`,updatecontent).then(()=>{
+    await axios.put(`https://backend-1m3m.onrender.com/item/${props.id}`,updatecontent).then(()=>{
        props.getItem();
     })
     props.onClose();

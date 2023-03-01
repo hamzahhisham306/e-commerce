@@ -12,7 +12,7 @@ function Item() {
 
     const getItem=async()=>{
        try {
-         await axios.get('http://localhost:4000/item').then(res=>{
+         await axios.get('https://backend-1m3m.onrender.com/item').then(res=>{
             setItem(res.data);
          })
        } catch (error) {
@@ -35,7 +35,7 @@ function Item() {
             imageUrl:event.target.imageUrl.value
         }
         console.log(newItem);
-        await axios.post('http://localhost:4000/item',newItem).then(data=>{
+        await axios.post('https://backend-1m3m.onrender.com/item',newItem).then(data=>{
             console.log(data);
             getItem();
             event.target.reset();

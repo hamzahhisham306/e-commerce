@@ -15,7 +15,7 @@ const Card = ({ imageUrl, title, description, price, id, getItem,useritemID }) =
     };
     const handlderDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:4000/item/${id}`).then(() => {
+            await axios.delete(`https://backend-1m3m.onrender.com/item/${id}`).then(() => {
                 getItem();
             })
         } catch (error) {

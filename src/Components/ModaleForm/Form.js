@@ -33,7 +33,7 @@ function Modal() {
         e.target.reset();
         dispatch(setEmptyArray());
         dispatch(setHiddenForm())
-        await axios.post('http://localhost:4000/order', order).then(res => {
+        await axios.post('https://backend-1m3m.onrender.com/order', order).then(res => {
             handleOrderSubmit()
         }).catch(err => console.log(err));
     }
