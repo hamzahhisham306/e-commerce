@@ -19,6 +19,7 @@ align-items: center;
     margin-left: 20px;
 }
 .list ul li{
+    cursor: pointer;
     margin-left: 25px;
 }
 li{
@@ -103,6 +104,9 @@ top: 12px;
 }
 li{
     text-decoration: none;
+    }
+a{
+    text-decoration: none;
 }
 .navbar.active .list.active{
     display: flex;
@@ -119,4 +123,23 @@ li{
 }
 .navbar.active .list.active ul li{
     margin-top: 10px;
+}
+.shopping{
+    position: relative;
+}
+.shopping::after{
+    position: absolute;
+    content: attr(data-notify);
+    background-color: rgb(140, 32, 241);
+    min-width: 15px;
+    height: 13px;
+    left: 20px;
+    top: -7px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+
+}
+.navbar_right li{
+    cursor: pointer;
 }

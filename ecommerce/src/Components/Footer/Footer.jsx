@@ -28,11 +28,11 @@ function Footer() {
             </div>
             <div className='col_four'>
                <h4>NEWSLETTER</h4>
-               <p>email@example.com</p>
+               <p>hamzahhisham306@gmail.com</p>
                <button>SUBSCRIBE</button>
             </div>
             </div>
-            <p className='copy'>Copyright ©2023 All rights reserved | This template is made with  by Colorlib</p>
+            <p className='copy'>Hamzah Hisham ©2023 All rights reserved</p>
         </div>
     )
 }

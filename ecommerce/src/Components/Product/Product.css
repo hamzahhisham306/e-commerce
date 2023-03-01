@@ -1,0 +1,32 @@
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    width: 100%;
+    margin-left: 100px;
+}
+li{
+    list-style-type: none;
+}
+.products{
+    display: flex;
+    
+}
+.products ul li{
+    transition: 0.4s;
+    padding: 10px;
+    border: 1px solid #fff;
+    font-size: 13px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+.products ul{
+    height: fit-content;
+    padding: 10px;
+    background-color: rgba(223, 216, 216,0.5);
+}
+.products ul li:hover{
+    background-color: gray;
+    color: #fff;
+}
