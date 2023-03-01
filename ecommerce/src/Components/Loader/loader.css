@@ -1,0 +1,29 @@
+.loader{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 80px;
+     color: black;
+    font-weight: bold;
+    position: relative;
+}
+.loader::after{
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 100px;
+    left: 20%;
+    top: 100px;
+    animation: to-left infinite ;
+    background-color: black;
+    -webkit-animation: to-left 2s linear infinite;
+}
+@keyframes to-left {
+   0%{
+    left: 20%;
+
+    }
+    50%{
+        left:70%;
+    }
+}
+

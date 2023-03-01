@@ -1,10 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './product.css';
+import axios from 'axios';
+import Card from '../../Card/Card.js';
+import Loader from '../../Loader/Loader';
 
 function Product() {
   const [show, setShow]=useState(false);
   const handleShow=_=>!show?setShow(true):setShow(false);
-  
+  const [products, setProducts]=useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [all ,setAll]=useState([]);
+  const getProducts=async()=>{
+    try {
+        await axios.get('http://localhost:4000/all').then(res=>{
+            setProducts(res.data);
+            setAll(res.data);
+
+        }).catch(err=>console.log(err));
+    } catch (error) {
+        console.log(error);
+    }
+}
+const filterCategories=(name)=>{
+  if(name==='All'){
+      setProducts(all);
+  }
+  else{
+  let categores=products.filter((item)=>item.brandName===name);
+     setProducts(categores);
+  };
+};
+useEffect(()=>{
+    getProducts().then(()=>{
+      setIsLoading(false);
+    })
+},[]);
+let brands=Array.from(new Set(products.map((item)=>item.brandName)));
+brands.unshift('All');
   return (
     <div className='product section__padding'>
      <h1>PRODUCT OVERVIEW</h1>
@@ -12,11 +44,8 @@ function Product() {
      <div className='product__filter'>
      <ul>
         <li className='active'>All Products</li>
-        <li>Women</li>
-        <li>Men</li>
-        <li>Bag</li>
-        <li>Shoes</li>
-        <li>Watches</li>
+        {isLoading&&<Loader/>}
+
      </ul>
      <div className='btns'>
        <button onClick={()=>handleShow()}>Filter</button>
@@ -24,40 +53,20 @@ function Product() {
      </div>
      </div>
     {show&&<div className='filter__section animate__animated animate__fadeInDown'>
-        <ul>
-            <h4>Sort By</h4>
-            <li>Default</li>
-            <li>Popularity</li>
-            <li>Average rating</li>
-            <li>Newness</li>
-            <li>Price: Low to High</li>
-            <li>Price High to Low</li>
-        </ul>
-        <ul>
-            <h4>Price</h4>
-            <li>All</li>
-            <li>$0.00 - $50.00</li>
-            <li>$50.00 - $100.00</li>
-            <li>$100.00 - $150.00</li>
-            <li>$150.00 - $200.00</li>
-            <li>$200.00+</li>
-        </ul>
-        <ul>
-            <h4>Color</h4>
-            <li><span className='black'></span>Black</li>
-            <li> <span className='blue'></span>blue</li>
-            <li><span className='gray'></span>Grey</li>
-            <li><span className='green'></span>Green</li>
-            <li><span className='red'></span>Red</li>
-            <li><span className='white'></span>White</li>
-        </ul>
-        <ul>
-            <h4>Tags</h4>
-            <button>Fashion</button>
-            <button>Lifestyle</button>
-            <button>Denim</button>
-        </ul>
+  
      </div>}
+     <div className='products'>
+     {show&&<ul className='filter__section animate__animated animate__fadeInDown'>
+      {brands&&brands.map((product,index)=>{
+        return <li key={index} onClick={()=>filterCategories(product)}>{product}</li>
+      })} 
+    </ul>
+     }
+    {products&&<div className='cards'>
+        {products&&products.map((product,index)=><Card imageUrl={product.imageUrl} title={product.brandName} description={product.name} price={product.price} key={index} id={product.id}/>)}
+    </div>
+    }
+    </div>
      </div>
     </div>
   )

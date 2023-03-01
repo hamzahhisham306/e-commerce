@@ -1,0 +1,16 @@
+.toastt {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  .toastt p {
+    margin: 0;
+    font-size: 14px;
+  }

@@ -22,11 +22,11 @@
     justify-content: space-between;
 }
 .filter__section{
-    display: grid;
+    /* display: grid;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 50px; */
     background-color: rgb(231, 230, 230);
-    grid-template-columns: repeat(auto-fill, minmax(300px ,1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(300px ,1fr)); */
 }
 
 .product .btns button{
@@ -101,6 +101,9 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
+.product{
+    width: 100%;
+}
 .red{
     width: 10px;
     height: 10px;
@@ -152,4 +155,13 @@
     margin-top: 40px;
     margin-left: 20px;
    }
+}
+.product .filter__list li{
+text-align: center;
+margin-left: 15px;
+}
+.product .filter__list{
+    display: flex;
+    padding: 20px;
+    margin-top: 70px;
 }

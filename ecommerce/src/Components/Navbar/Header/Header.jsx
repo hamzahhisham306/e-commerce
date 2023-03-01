@@ -3,18 +3,20 @@ import './header.css';
 import 'animate.css';
 import img1 from '../../../assets/slide-01.jpg.webp';
 import img2 from '../../../assets/slide-02.jpg.webp';
+// import shoes1 from '../../../assets/shoes1.jpg';
+// import shoes2 from '../../../assets/shoes3.avif';
 const items = [
     {
       id: 1,
       title: 'MEN NEW Collection',
-      fashion:"JACKETS & COATS",
+      fashion:"Shoes & COATS",
       button:"SHOP NOW",
       image: img1,
     },
     {
       id: 2,
       title: 'Women Collection',
-      fashion:"JACKETS & COATS",
+      fashion:"Shoes & COATS",
       image: img2,
       button:"SHOP NOW",
     },
@@ -25,11 +27,11 @@ function Header() {
     const [currentIndex, setCurrentIndex] = useState(0);
     
 
-    const handlePrev = () => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? items.length - 1 : prevIndex - 1
-      );
-    };
+    // const handlePrev = () => {
+    //   setCurrentIndex((prevIndex) =>
+    //     prevIndex === 0 ? items.length - 1 : prevIndex - 1
+    //   );
+    // };
   
     const handleNext = () => {
       setCurrentIndex((prevIndex) =>
